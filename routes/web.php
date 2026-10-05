@@ -52,7 +52,7 @@ Route::middleware(['auth.custom'])->group(function () {
         Route::get('/session/{session}/complete', [StudyController::class, 'complete'])->name('study.complete');
         Route::get('/session/{session}/break', [StudyController::class, 'break'])->name('study.break');
         Route::get('/review-sessions', [StudyController::class, 'reviewSessions'])->name('study.review-sessions');
-Route::post('/session/{session}/start-review', [StudyController::class, 'startReview'])->name('study.start-review');
+Route::post('/session/{session}/start-review', [StudyController::class, 'startReview'])->name('study.session.start-review');
 Route::post('/{note}/start-review', [StudyController::class, 'startReview'])->name('study.start-review');
     });
 
