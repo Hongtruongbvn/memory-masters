@@ -1,8 +1,9 @@
-vendor
 node_modules
+vendor
 .git
 .env
-.env.*
 storage/logs/*
-public/hot
-public/build
+bootstrap/cache/*.php
+storage/framework/cache/*
+storage/framework/sessions/*
+storage/framework/views/*
