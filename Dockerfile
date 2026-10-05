@@ -3,7 +3,7 @@ WORKDIR /app
 COPY composer.json composer.lock ./
 RUN composer install --no-dev --no-scripts --no-autoloader --prefer-dist --ignore-platform-reqs
 COPY . .
-RUN composer dump-autoloader --optimize --no-dev --no-scripts
+RUN composer dump-autoload --optimize --no-dev --no-scripts
 
 FROM node:20 AS assets
 WORKDIR /app
